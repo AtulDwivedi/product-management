@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ProductDetailComponent } from './product/product-detail.component';
 import { ProductDetailGuard } from './product/product-detail.guard';
+import { HeaderComponent } from './menu/header/header.component';
+import { FooterComponent } from './menu/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductDetailGuard } from './product/product-detail.guard';
     StarComponent,
     WelcomeComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
