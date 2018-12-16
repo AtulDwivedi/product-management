@@ -13,6 +13,7 @@ import { ProductDetailComponent } from './product/product-detail.component';
 import { ProductDetailGuard } from './product/product-detail.guard';
 import { HeaderComponent } from './menu/header/header.component';
 import { FooterComponent } from './menu/footer/footer.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -30,11 +31,11 @@ import { FooterComponent } from './menu/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([{ path: 'products', component: ProductListComponent },
     { path: 'products/:id', canActivate: [ProductDetailGuard], component: ProductDetailComponent },
-    { path: 'welcome', component: WelcomeComponent },
-    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-    { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+    { path: '', component: WelcomeComponent },
+    { path: '**', redirectTo: '', pathMatch: 'full' }
     ])
   ],
   providers: [],
