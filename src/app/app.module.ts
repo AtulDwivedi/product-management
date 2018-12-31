@@ -10,6 +10,7 @@ import { HeaderComponent } from './menu/header/header.component';
 import { FooterComponent } from './menu/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductModule } from './product/product.module'
+import { CustomerModule } from './customer/customer.module';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,13 @@ import { ProductModule } from './product/product.module'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ProductModule,
+    CustomerModule,
     RouterModule.forRoot([
 
       { path: '', component: WelcomeComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' }
-    ]),
-    ProductModule
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
